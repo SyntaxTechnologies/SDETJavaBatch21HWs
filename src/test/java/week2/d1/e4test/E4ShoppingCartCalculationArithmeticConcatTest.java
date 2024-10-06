@@ -1,7 +1,6 @@
-package week2.e1test;
+package week2.d1.e4test;
 
-
-import org.example.week2.d1.e1.E1StringConcatenation;
+import org.example.week2.d1.e4.E4ShoppingCartCalculationArithmeticConcat;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +10,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class E1StringConcatenationTest {
+public class E4ShoppingCartCalculationArithmeticConcatTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -27,13 +26,14 @@ public class E1StringConcatenationTest {
     }
 
     @Test
-    void testFullNameConcatenation() {
-        E1StringConcatenation.main(new String[]{});
-        String expectedOutput = "John Smith" + System.lineSeparator();
+    void testShoppingCartCalculation() {
+        E4ShoppingCartCalculationArithmeticConcat.main(new String[]{});
+        String expectedOutput = "Total Cost: $90.0" + System.lineSeparator() +
+                "Discount Amount: $9.0" + System.lineSeparator() +
+                "Final Price: $81.0" + System.lineSeparator();
 
         String failureMessage = "The output does not match the expected values.\n" +
-                "Please ensure that your program creates a variable with the value 'John',\n" +
-                "creates a variable with the value 'Smith', and prints them concatenated with a space in between.";
+                "Please ensure that your program declares the variables 'item1', 'item2', and 'item3' and performs the arithmetic operations correctly.";
 
         assertEquals(expectedOutput, outContent.toString(), failureMessage);
     }

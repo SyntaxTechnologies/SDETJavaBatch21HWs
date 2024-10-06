@@ -1,6 +1,6 @@
-package week2.e7test;
+package week2.d2.e11test;
 
-import org.example.week2.d1.e7.E7ShoppingCartRoundingTypeCasting;
+import org.example.week2.d2.e11.E11StringEqualsIfConditions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class E7ShoppingCartRoundingTypeCastingTest {
+public class E11StringEqualsIfConditionsTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -26,13 +26,13 @@ public class E7ShoppingCartRoundingTypeCastingTest {
     }
 
     @Test
-    void testShoppingCartRounding() {
-        E7ShoppingCartRoundingTypeCasting.main(new String[]{});
-        String expectedOutput = "The original total cost is $54.73" + System.lineSeparator() +
-                "The rounded total cost is $54" + System.lineSeparator();
+    void testStringEquals() {
+        // Simulate the program with the string "Java"
+        E11StringEqualsIfConditions.main(new String[]{});
+        String expectedOutput = "The programming language is Java." + System.lineSeparator();
 
         String failureMessage = "The output does not match the expected values.\n" +
-                "Please ensure that your program declares the variables 'item1', 'item2', and 'item3', calculates the total cost, performs type casting correctly, and prints the results as specified.";
+                "Please ensure that your program correctly identifies the string 'Java'.";
 
         assertEquals(expectedOutput, outContent.toString(), failureMessage);
     }

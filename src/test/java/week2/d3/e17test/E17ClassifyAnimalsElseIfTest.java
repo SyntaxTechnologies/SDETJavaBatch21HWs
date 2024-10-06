@@ -1,6 +1,7 @@
-package week2.e6test;
+package week2.d3.e17test;
 
-import org.example.week2.d1.e6.E6NegativeModulusCalculation;
+
+import org.example.week2.d3.e17.E17ClassifyAnimalsElseIf;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +11,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class E6NegativeModulusCalculationTest {
+public class E17ClassifyAnimalsElseIfTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -26,13 +27,17 @@ public class E6NegativeModulusCalculationTest {
     }
 
     @Test
-    void testNegativeModulusCalculation() {
-        E6NegativeModulusCalculation.main(new String[]{});
-        String expectedOutput = "-21 mod 4 = -1" + System.lineSeparator();
+    void testClassifyDog() {
+        String simulatedCode = "dog";
+        E17ClassifyAnimalsElseIf.main(new String[]{simulatedCode});
+        String expectedOutput = "The animal is a mammal." + System.lineSeparator();
 
-        String failureMessage = "The output does not match the expected values.\n" +
-                "Please ensure that your program declares the variables 'dividend' and 'divisor' and performs the modulus operation correctly.";
+        String failureMessage = "The output does not match the expected values for animal 'dog'.\n" +
+                "Please ensure that your program classifies the animal correctly.";
 
         assertEquals(expectedOutput, outContent.toString(), failureMessage);
     }
+
+    
+   
 }

@@ -1,4 +1,4 @@
-package week2.e3test;
+package week2.d1.e3test;
 
 import org.example.week2.d1.e3.E3CalculateCostArithmeticConcat;
 import org.junit.jupiter.api.AfterEach;

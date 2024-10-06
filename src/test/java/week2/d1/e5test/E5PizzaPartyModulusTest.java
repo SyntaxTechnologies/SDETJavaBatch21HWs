@@ -1,6 +1,6 @@
-package week2.e4test;
+package week2.d1.e5test;
 
-import org.example.week2.d1.e4.E4ShoppingCartCalculationArithmeticConcat;
+import org.example.week2.d1.e5.E5PizzaPartyModulus;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class E4ShoppingCartCalculationArithmeticConcatTest {
+public class E5PizzaPartyModulusTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -26,14 +26,13 @@ public class E4ShoppingCartCalculationArithmeticConcatTest {
     }
 
     @Test
-    void testShoppingCartCalculation() {
-        E4ShoppingCartCalculationArithmeticConcat.main(new String[]{});
-        String expectedOutput = "Total Cost: $90.0" + System.lineSeparator() +
-                "Discount Amount: $9.0" + System.lineSeparator() +
-                "Final Price: $81.0" + System.lineSeparator();
+    void testPizzaParty() {
+        E5PizzaPartyModulus.main(new String[]{});
+        String expectedOutput = "Each person gets 3 slices." + System.lineSeparator() +
+                "There are 1 slices left over." + System.lineSeparator();
 
         String failureMessage = "The output does not match the expected values.\n" +
-                "Please ensure that your program declares the variables 'item1', 'item2', and 'item3' and performs the arithmetic operations correctly.";
+                "Please ensure that your program declares the variables 'totalSlices' and 'friends' and performs the modulus operation correctly.";
 
         assertEquals(expectedOutput, outContent.toString(), failureMessage);
     }
