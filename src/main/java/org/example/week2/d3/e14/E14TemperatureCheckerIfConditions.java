@@ -6,6 +6,7 @@ public class E14TemperatureCheckerIfConditions {
 
 
         // Check the temperature and print the message
+        // Declare the temperature variable as public and static
 
     }
 }
